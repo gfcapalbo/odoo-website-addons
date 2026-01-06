@@ -1,3 +1,6 @@
-#oe_systray .no-index .fa{
+.no-index .fa{
 	color:#a94442 !important;
+}
+.no-index.hidden{
+   display:none;
 }

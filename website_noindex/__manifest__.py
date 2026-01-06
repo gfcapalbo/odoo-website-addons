@@ -18,26 +18,30 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
     'name': 'Website - no index, no follow',
+    'version': '14.0.1.0.0',
     'category': 'Website',
-    'summary': 'Add the possibilities to deactivate website indexation by the search engines.',
-    'version': '1.0',
-    'licence': 'GPL-3',
-    'description': """
-        Add the possibilities to deactivate website indexation by the search engines like Google and Bing.
-        """,
+    'summary': 'Add the possibility to deactivate website indexing by search engines (Google, Bing)',
+    'description': 'Add the possibility to deactivate website indexing by search engines (Google, Bing).',
+    'license': 'AGPL-3',
     'author': 'Kardec',
     'website': 'https://www.kardec.net',
-    'depends': [
-        'website'
-    ],
+    'depends': ['website', 'website_blog'],
     'data': [
-        'views/website-config-settings.xml',
-        'templates/assets.xml',
-        'templates/website_layout.xml',
-        'templates/website_navbar.xml',
+        'views/res_config_settings.xml',
+        'views/assets.xml',
+        'views/website_layout.xml',
+        'views/website_navbar.xml',
+        'views/blog_templates.xml',
+        'views/blog_post_views.xml',
     ],
+    'assets': {
+        'website.assets_editor': [
+            'website_noindex/static/src/css/styles.css',
+            'website_noindex/static/src/js/website_editor.js',
+        ],
+    },
+    'installable': True,
     'application': False,
 }

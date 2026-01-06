@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
-from openerp.addons.web import http
-from openerp.http import request
+from odoo import http
+from odoo.http import request
 
+class WebsiteNoindex(http.Controller):
 
-class Website(http.Controller):
-
-    @http.route(['/website/index_noindex'], type='json', auth="public", website=True)
+    @http.route('/website/index_noindex', type='json', auth="public", website=True)
     def index_noindex(self, index):
-
         if index == 'index':
-            request.website.write({
-                'no_index': False
-            })
+            request.website.write({'no_index': False})
         else:
-            request.website.write({
-                'no_index': True
-            })
-
+            request.website.write({'no_index': True})
         return True
+
