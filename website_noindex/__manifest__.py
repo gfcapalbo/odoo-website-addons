@@ -27,14 +27,12 @@
     'license': 'AGPL-3',
     'author': 'Kardec',
     'website': 'https://www.kardec.net',
-    'depends': ['website', 'website_blog'],
+    'depends': ['website' ],
     'data': [
         'views/res_config_settings.xml',
         'views/assets.xml',
         'views/website_layout.xml',
         'views/website_navbar.xml',
-        'views/blog_templates.xml',
-        'views/blog_post_views.xml',
     ],
     'assets': {
         'website.assets_editor': [
